@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "author": "Juan de dios Zapata",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -70.2, "left": -102.8, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -76.2, "left": -403.8, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 11.2,
+      "left": -24.6,
+      "rotate": 180,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 3.95,
+      "left": -67.2,
+      "attrs": { "value": "150" }
+    }
+  ],
+  "connections": [
+    [ "led1:A", "bb1:8t.e", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:9t.e", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:2t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:8t.d", "", [ "$bb" ] ],
+    [ "bb1:2t.c", "uno:9", "green", [ "v-105.6", "h-134.4", "v19.2" ] ],
+    [ "bb1:9t.a", "bb1:tn.6", "green", [ "v0" ] ],
+    [ "bb1:bp.1", "bb1:tp.2", "green", [ "v-0.9", "h-58.4", "v-172.8" ] ],
+    [ "bb1:tn.2", "bb1:bn.1", "green", [ "v-0.1", "h-48.8", "v172.8" ] ],
+    [ "uno:GND.3", "bb1:bn.4", "black", [ "v47.9", "h196" ] ],
+    [ "uno:5V", "bb1:bp.5", "red", [ "v76.7", "h-5.8" ] ]
+  ],
+  "dependencies": {}
+}
